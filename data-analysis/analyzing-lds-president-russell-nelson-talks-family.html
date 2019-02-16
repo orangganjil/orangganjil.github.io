@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Notes on machine learning and information security">
+    <meta name="author" content="Cody Hatch">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <title>Analyzing LDS President Russell Nelson Talks About Family - Data Analysis</title>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../theme/js/jquery.min.js"><\/script>')
+    </script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../theme/css/bootstrap.css" />
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" type="text/css" href="../theme/css/ie10-viewport-bug-workaround.css" />
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="../theme/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../theme/css/notebooks.css" />
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700|Roboto:400,500,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        
+
+    <meta name="tags" content="Religion" />
+
+</head>
+
+<body>
+
+    <div class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="..">Cody Hatch</a>
+            </div>
+            <div class="navbar-collapse collapse" id="searchbar">
+
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Table Of Contents<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="../#Blog">Blog</a></li>
+                          <li><a href="../#Data_Analysis">Data Analysis</a></li>
+                          <li><a href="../#Information_Security">Information Security</a></li>
+                          <li><a href="../#Presentations">Presentations</a></li>
+                          <li><a href="../#Projects">Projects</a></li>
+                          <li><a href="../#Tools">Tools</a></li>
+                      </ul>
+                  </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../pages/about.html">About Cody</a></li>
+                            <li><a href="https://github.com/orangganjil">GitHub</a></li>
+                            <li><a href="https://twitter.com/codyhatch">Twitter</a></li>
+                        </ul>
+                    </li>
+
+
+                    <!--<li class="dropdown">
+                        <a href="../feeds/blog.rss.xml">Blog RSS</a>
+                    </li>-->
+
+
+                </ul>
+
+                <form class="navbar-form" action="../search.html" onsubmit="return validateForm(this.elements['q'].value);">
+                    <div class="form-group" style="display:inline;">
+                        <div class="input-group" style="display:table;">
+                            <span class="input-group-addon" style="width:1%;"><span class="glyphicon glyphicon-search"></span></span>
+                            <input class="form-control search-query" name="q" id="tipue_search_input" placeholder="e.g. scikit, python, firewall" required autocomplete="off" type="text">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+
+
+
+    <!-- end of header section -->
+    <div class="container">
+<!-- <div class="alert alert-warning alert-dismissable" role="alert">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    Here is some <a href="http://codyhatch.com" class="alert-link">dismissable alert</a>.
+</div> -->
+
+<section id="content" class="body">
+    <header>
+    <h1>
+      Analyzing LDS President Russell Nelson Talks About Family
+    </h1>
+<ol class="breadcrumb">
+    <li>
+        <time class="published" datetime="2018-02-20T23:00:00-07:00">
+            20 February 2018
+        </time>
+    </li>
+    <li>Data Analysis</li>
+    <li>Religion</li>
+</ol>
+</header>
+<div class='article_content'>
+<p>Several friends and I were recently discussing whether Wendy Watson Nelson has affected the topics about which LDS President Russell Nelson has chosen to speak, so I decided to perform a quick analysis of his General Conference talks going back to 1995.</p>
+<p>First, though, for those unfamiliar with why we would be interested in this question, I’ll give a bit of background. According to <a href="https://www.mormonnewsroom.org/article/elder-russell-m.-nelson-marries-wendy-l.-watson">LDS Newsroom</a>, President Russell Nelson and Wendy Watson Nelson were married April 6, 2006. Wendy Watson was President Nelson’s second wife. His first wife was Dantzel White Nelson, who died February 12, 2005.</p>
+<p>Sister Wendy Watson Nelson was a professor of marriage and family therapy at BYU prior to her marriage to President Nelson, and had written several books about relationships, marriage, and family. Since they have been married, she, along with President Nelson, has spoken at several firesides and face-to-face events, most recently in Las Vegas, Nevada. She frequently provides marriage and relationship advice at these events. She is highly educated, has teaching experience in these topics, is willing to speak frequently on these topics, and is much younger than President Nelson. Naturally, we were curious as to what type of influence, if any, she might have on President Nelson’s talks.</p>
+<p>Since President and Sister Nelson were married in April 2006, in performing my analysis I had initially thought I’d grab all of President Nelson’s talks going back to 1995 so as to get a similar number of years pre-marriage as there are available post-marriage; however, I was unable to find any way on lds.org to sort President Nelson’s talks chronologically. I had considered sucking down all of his talks from the site and sorting them myself, but was reluctant to do so due to potential loads that might place on the Church’s web servers (there are a lot of talks). It just seemed like I’d be crossing some line, so I settled on General Conference talks. I downloaded all of President Nelson’s General Conference talks going back to April 1995 and ran them through a tool that performs a word count on the text. I kept the top ten words used in each talk and added them to a data frame within a Python program. Finally, I filtered the talks for words associated with marriage and family (the areas of Sister Nelson’s expertise), and then graphed them on a time series chart along with a reference line for the Nelson’s marriage.</p>
+<p><img alt="svg" src="../images/pres-nelson-family.svg"></p>
+</div>
+    <aside>
+    <div class="bug-reporting__panel">
+        <h3>Have a question or suggestion?</h3>
+        <p>Send me a message directly on <a href='https://twitter.com/codyhatch'>Twitter</a>.</p>
+    </div>
+    </aside>
+</section>
+
+    </div>
+    <!-- start of footer section -->
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">
+                <center>
+                Copyright &copy; Cody Hatch, 2009-2018
+                </center>
+            </p>
+        </div>
+    </footer>
+
+    <!-- This jQuery line finds any span that contains code highlighting classes and then selects the parent <pre> tag and adds a border. This is done as a workaround to visually distinguish the code inputs and outputs -->
+    <script>
+        $( ".hll, .n, .c, .err, .k, .o, .cm, .cp, .c1, .cs, .gd, .ge, .gr, .gh, .gi, .go, .gp, .gs, .gu, .gt, .kc, .kd, .kn, .kp, .kr, .kt, .m, .s, .na, .nb, .nc, .no, .nd, .ni, .ne, .nf, .nl, .nn, .nt, .nv, .ow, .w, .mf, .mh, .mi, .mo, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss, .bp, .vc, .vg, .vi, .il" ).parent( "pre" ).css( "border", "1px solid #DEDEDE" );
+    </script>
+
+    <!-- Load Google Analytics -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-48614619-1', 'codyhatch.com');
+        ga('send', 'pageview');
+    </script>
+    <!-- End of Google Analytics -->
+
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../theme/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../theme/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+
+</html>
