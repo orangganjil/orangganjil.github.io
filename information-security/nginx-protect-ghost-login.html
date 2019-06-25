@@ -128,34 +128,34 @@
 </blockquote>
 <p><a href="http://www.ghost.org">Ghost</a> is some fantastic software but will inevitably have security vulnerabilities, especially in the complex pieces within the administration functions. It would be a good idea to reduce Ghost's attack surface by restricting what systems can even access the administrative portion of Ghost, and access controls within Nginx allow us to do so if we are using Nginx to proxy connections to Ghost.</p>
 <p>Access controls within Nginix are pretty straightforward. For example, if you want to allow a specific IP address to access a portion of your site, but deny all others, you'd define the location and access controls within the server block:</p>
-<div class="highlight"><pre><span></span>server {
-    ...
-    location /mysecretlocation/ {
-        allow 1.1.1.1;
-        deny all;
-    }
-    ...
-}
+<div class="highlight"><pre><span></span><span class="n">server</span> <span class="err">{</span>
+    <span class="p">...</span>
+    <span class="k">location</span> <span class="o">/</span><span class="n">mysecretlocation</span><span class="o">/</span> <span class="err">{</span>
+        <span class="n">allow</span> <span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">;</span>
+        <span class="n">deny</span> <span class="k">all</span><span class="p">;</span>
+    <span class="err">}</span>
+    <span class="p">...</span>
+<span class="err">}</span>
 </pre></div>
 
 
 <p>That's pretty straightforward, causing Nginx to allow connections to www.example.com/mysecretlocation by the IP address 1.1.1.1, while kicking a 403 Forbidden message to all others.</p>
 <p>This gets a little different when using Nginx to proxy connections to Ghost, but it is still pretty straightforward - we just need to add the proxy information to the location block, like this:</p>
-<div class="highlight"><pre><span></span><span class="nt">server</span> <span class="p">{</span>
-    <span class="err">...</span>
-    <span class="err">location</span> <span class="err">/ghost/</span> <span class="err">{</span>
-        <span class="err">allow</span> <span class="err">1.1.1.1</span><span class="p">;</span>
-        <span class="err">deny</span> <span class="err">all</span><span class="p">;</span>
-        <span class="err">proxy_set_header</span>   <span class="err">X-Real-IP</span> <span class="err">$remote_addr</span><span class="p">;</span>
-        <span class="err">proxy_set_header</span>   <span class="err">X-Forwarded-For</span>  <span class="err">$proxy_add_x_forwarded_for</span><span class="p">;</span>
-        <span class="err">proxy_set_header</span>   <span class="err">X-Forwarded-Proto</span> <span class="err">$scheme</span><span class="p">;</span>
-        <span class="err">proxy_set_header</span>   <span class="err">Host</span> <span class="err">$http_host</span><span class="p">;</span>
-        <span class="err">proxy_set_header</span>   <span class="err">Connection</span> <span class="err">&quot;&quot;</span><span class="p">;</span>
-        <span class="err">proxy_http_version</span> <span class="err">1.1</span><span class="p">;</span>
-        <span class="err">proxy_pass</span>         <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ghost_upstream_defined_in_nginx_conf</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="o">...</span>
-<span class="err">}</span>
+<div class="highlight"><pre><span></span><span class="nv">server</span> {
+    ...
+    <span class="nv">location</span> <span class="o">/</span><span class="nv">ghost</span><span class="o">/</span> {
+        <span class="nv">allow</span> <span class="mi">1</span>.<span class="mi">1</span>.<span class="mi">1</span>.<span class="mi">1</span><span class="c1">;</span>
+        <span class="nv">deny</span> <span class="nv">all</span><span class="c1">;</span>
+        <span class="nv">proxy_set_header</span>   <span class="nv">X</span><span class="o">-</span><span class="nv">Real</span><span class="o">-</span><span class="nv">IP</span> $<span class="nv">remote_addr</span><span class="c1">;</span>
+        <span class="nv">proxy_set_header</span>   <span class="nv">X</span><span class="o">-</span><span class="nv">Forwarded</span><span class="o">-</span><span class="k">For</span>  $<span class="nv">proxy_add_x_forwarded_for</span><span class="c1">;</span>
+        <span class="nv">proxy_set_header</span>   <span class="nv">X</span><span class="o">-</span><span class="nv">Forwarded</span><span class="o">-</span><span class="nv">Proto</span> $<span class="nv">scheme</span><span class="c1">;</span>
+        <span class="nv">proxy_set_header</span>   <span class="nv">Host</span> $<span class="nv">http_host</span><span class="c1">;</span>
+        <span class="nv">proxy_set_header</span>   <span class="nv">Connection</span> <span class="s2">&quot;&quot;</span><span class="c1">;</span>
+        <span class="nv">proxy_http_version</span> <span class="mi">1</span>.<span class="mi">1</span><span class="c1">;</span>
+        <span class="nv">proxy_pass</span>         <span class="nv">http</span>:<span class="o">//</span><span class="nv">ghost_upstream_defined_in_nginx_conf</span><span class="c1">;</span>
+    }
+    ...
+}
 </pre></div>
 
 
