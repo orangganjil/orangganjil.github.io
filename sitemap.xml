@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://codyhatch.com/</loc>
-<lastmod>2019-07-02T03:41:59-00:00</lastmod>
+<lastmod>2019-08-01T03:52:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -13,6 +13,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://codyhatch.com/pages/about.html</loc>
 <lastmod>2017-10-01T12:00:00-06:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://codyhatch.com/blog/news-and-podcast-episode-2019-07.html</loc>
+<lastmod>2019-07-31T23:00:00-06:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
