@@ -163,36 +163,36 @@
 <h4>ssl_stapling_verify</h4>
 <p>Enables the verification of OCSP responses by the server.</p>
 <p>The other thing you'll want to do is to redirect all HTTP requests to HTTPS sites. This can easily be done with redirects in Nginx, even if you need to redirect multiple domains (e.g., you own the .com, .net, and .org TLDs for a domain and want them all to go to one TLD).</p>
-<div class="highlight"><pre><span></span><span class="nv">server</span> {
-    <span class="nv">listen</span>      <span class="mi">80</span><span class="c1">;</span>
-    <span class="nv">listen</span>      <span class="mi">443</span> <span class="nv">ssl</span><span class="c1">;</span>
+<div class="highlight"><pre><span></span><span class="nt">server</span> <span class="p">{</span>
+    <span class="err">listen</span>      <span class="err">80</span><span class="p">;</span>
+    <span class="err">listen</span>      <span class="err">443</span> <span class="err">ssl</span><span class="p">;</span>
 
-    ...
+    <span class="err">...</span>
 
-    <span class="nv">server_name</span>  <span class="nv">example</span>.<span class="nv">com</span> <span class="nv">www</span>.<span class="nv">example</span>.<span class="nv">com</span> <span class="nv">example</span>.<span class="nv">org</span> <span class="nv">www</span>.<span class="nv">example</span>.<span class="nv">org</span> <span class="nv">example</span>.<span class="nv">net</span> <span class="nv">www</span>.<span class="nv">example</span>.<span class="nv">net</span><span class="c1">;</span>
+    <span class="err">server_name</span>  <span class="err">example.com</span> <span class="err">www.example.com</span> <span class="err">example.org</span> <span class="err">www.example.org</span> <span class="err">example.net</span> <span class="err">www.example.net</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="ss">(</span>$<span class="nv">host</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">www.example.com</span><span class="s1">&#39;</span><span class="ss">)</span> {
-        <span class="nv">rewrite</span> <span class="o">^/</span><span class="ss">(</span>.<span class="o">*</span><span class="ss">)</span>$ <span class="nv">https</span>:<span class="o">//</span><span class="nv">example</span>.<span class="nv">com</span><span class="o">/</span><span class="mh">$1</span> <span class="nv">permanent</span><span class="c1">;</span>
-    }
-    <span class="k">if</span> <span class="ss">(</span>$<span class="nv">host</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">http://example.com</span><span class="s1">&#39;</span><span class="ss">)</span> {
-        <span class="nv">rewrite</span> <span class="o">^/</span><span class="ss">(</span>.<span class="o">*</span><span class="ss">)</span>$ <span class="nv">https</span>:<span class="o">//</span><span class="nv">example</span>.<span class="nv">com</span><span class="o">/</span><span class="mh">$1</span> <span class="nv">permanent</span><span class="c1">;</span>
-    }
-    <span class="k">if</span> <span class="ss">(</span>$<span class="nv">host</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">example.org</span><span class="s1">&#39;</span><span class="ss">)</span> {
-        <span class="nv">rewrite</span> <span class="o">^/</span><span class="ss">(</span>.<span class="o">*</span><span class="ss">)</span>$ <span class="nv">https</span>:<span class="o">//</span><span class="nv">example</span>.<span class="nv">com</span><span class="o">/</span><span class="mh">$1</span> <span class="nv">permanent</span><span class="c1">;</span>
-    }
-    <span class="k">if</span> <span class="ss">(</span>$<span class="nv">host</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">www.example.org</span><span class="s1">&#39;</span><span class="ss">)</span> {
-        <span class="nv">rewrite</span> <span class="o">^/</span><span class="ss">(</span>.<span class="o">*</span><span class="ss">)</span>$ <span class="nv">https</span>:<span class="o">//</span><span class="nv">example</span>.<span class="nv">com</span><span class="o">/</span><span class="mh">$1</span> <span class="nv">permanent</span><span class="c1">;</span>
-    }
-    <span class="k">if</span> <span class="ss">(</span>$<span class="nv">host</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">example.net</span><span class="s1">&#39;</span><span class="ss">)</span> {
-        <span class="nv">rewrite</span> <span class="o">^/</span><span class="ss">(</span>.<span class="o">*</span><span class="ss">)</span>$ <span class="nv">https</span>:<span class="o">//</span><span class="nv">example</span>.<span class="nv">com</span><span class="o">/</span><span class="mh">$1</span> <span class="nv">permanent</span><span class="c1">;</span>
-    }
-    <span class="k">if</span> <span class="ss">(</span>$<span class="nv">host</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">www.example.net</span><span class="s1">&#39;</span><span class="ss">)</span> {
-        <span class="nv">rewrite</span> <span class="o">^/</span><span class="ss">(</span>.<span class="o">*</span><span class="ss">)</span>$ <span class="nv">https</span>:<span class="o">//</span><span class="nv">example</span>.<span class="nv">com</span><span class="o">/</span><span class="mh">$1</span> <span class="nv">permanent</span><span class="c1">;</span>
-    }
+    <span class="err">if</span> <span class="err">($host</span> <span class="err">=</span> <span class="err">&#39;www.example.com&#39;)</span> <span class="err">{</span>
+        <span class="err">rewrite</span> <span class="err">^/(.*)$</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span> <span class="n">permanent</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nt">if</span> <span class="o">($</span><span class="nt">host</span> <span class="o">=</span> <span class="s1">&#39;http://example.com&#39;</span><span class="o">)</span> <span class="p">{</span>
+        <span class="err">rewrite</span> <span class="err">^/(.*)$</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span> <span class="n">permanent</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nt">if</span> <span class="o">($</span><span class="nt">host</span> <span class="o">=</span> <span class="s1">&#39;example.org&#39;</span><span class="o">)</span> <span class="p">{</span>
+        <span class="err">rewrite</span> <span class="err">^/(.*)$</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span> <span class="n">permanent</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nt">if</span> <span class="o">($</span><span class="nt">host</span> <span class="o">=</span> <span class="s1">&#39;www.example.org&#39;</span><span class="o">)</span> <span class="p">{</span>
+        <span class="err">rewrite</span> <span class="err">^/(.*)$</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span> <span class="n">permanent</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nt">if</span> <span class="o">($</span><span class="nt">host</span> <span class="o">=</span> <span class="s1">&#39;example.net&#39;</span><span class="o">)</span> <span class="p">{</span>
+        <span class="err">rewrite</span> <span class="err">^/(.*)$</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span> <span class="n">permanent</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nt">if</span> <span class="o">($</span><span class="nt">host</span> <span class="o">=</span> <span class="s1">&#39;www.example.net&#39;</span><span class="o">)</span> <span class="p">{</span>
+        <span class="err">rewrite</span> <span class="err">^/(.*)$</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span> <span class="n">permanent</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    ...
+    <span class="o">...</span>
 
-}
+<span class="err">}</span>
 </pre></div>
 
 

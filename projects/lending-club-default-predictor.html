@@ -147,13 +147,13 @@
 <p>The API will then load the loans into a Pandas DataFrame, make some modifications, and then run them through the Random Forest Classifier model. It then will add another column to the DataFrame for the predicted probability of default/charge-off. Finally, the API will then return JSON output of the memberId and probability of default for each loan that was input.</p>
 <h2>Machine Learning Model</h2>
 <p>The machine learning model is a Random Forest Classifier trained on all Lending Club loans from 2007 through the first half of 2017. It has the following parameters:</p>
-<div class="highlight"><pre><span></span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">bootstrap</span><span class="o">=</span><span class="k">True</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s1">&#39;balanced&#39;</span><span class="p">,</span>
-            <span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;gini&#39;</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span>
-            <span class="n">max_leaf_nodes</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">min_impurity_split</span><span class="o">=</span><span class="mi">1</span><span class="n">e</span><span class="o">-</span><span class="mi">07</span><span class="p">,</span>
-            <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-            <span class="n">min_weight_fraction_leaf</span><span class="o">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-            <span class="n">oob_score</span><span class="o">=</span><span class="k">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="k">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-            <span class="n">warm_start</span><span class="o">=</span><span class="k">False</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="err">RandomForestClassifier(bootstrap=True, class_weight=&#39;balanced&#39;,</span>
+<span class="err">            criterion=&#39;gini&#39;, max_depth=None, max_features=&#39;auto&#39;,</span>
+<span class="err">            max_leaf_nodes=None, min_impurity_split=1e-07,</span>
+<span class="err">            min_samples_leaf=5, min_samples_split=2,</span>
+<span class="err">            min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=3,</span>
+<span class="err">            oob_score=False, random_state=None, verbose=0,</span>
+<span class="err">            warm_start=False)</span>
 </pre></div>
 
 
