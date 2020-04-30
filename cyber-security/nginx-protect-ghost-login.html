@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <title>DNS Registrar Checker - Tools</title>
+    <title>Configure Nginx to Protect Ghost Login Page - Cyber Security</title>
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -35,7 +35,7 @@
     <![endif]-->
         
 
-    <meta name="tags" content="Security" />
+    <meta name="tags" content="Application" />
 
 </head>
 
@@ -97,30 +97,60 @@
 <section id="content" class="body">
     <header>
     <h1>
-      DNS Registrar Checker
+      Configure Nginx to Protect Ghost Login Page
     </h1>
 <ol class="breadcrumb">
     <li>
-        <time class="published" datetime="2015-08-14T19:35:00-06:00">
-            14 August 2015
+        <time class="published" datetime="2013-10-25T12:35:00-06:00">
+            25 October 2013
         </time>
     </li>
-    <li>Tools</li>
-    <li>Security</li>
+    <li>Cyber Security</li>
+    <li>Application</li>
 </ol>
 </header>
 <div class='article_content'>
-<p>I wrote a basic, hacked together Perl script to check domain registrar information and determine whether the DNS for your domain has been hijacked. I wrote the script a while ago in Perl and, since it works fine, I haven't bothered to change it.</p>
-<p>There are a few key things to note:</p>
-<ul>
-<li>You'll need to adjust some of the variables to fit your environment (e.g., domains, allowed IPs for DNS servers, etc.).</li>
-<li>I recommend that this run on a server or something where you can schedule it via cron to run at regular intervals.</li>
-<li>I recommend that you include administrative emails for notification that are not part of the domains this script monitors.</li>
-<li>If possible, run this from a server that can utilize split DNS to avoid any potential issues if the admin domains are hijacked.</li>
-</ul>
-<p>Again, this is a quickly hacked-together script but it works.</p>
-<p>Enjoy.</p>
-<p>The code is available at the <a href="https://github.com/orangganjil/dns-registrar-checker">GitHub repo</a>.</p>
+<p>In information security, it is not possible to be correct all the time - things will break, controls will fail, and software bugs will exist; those things are inevitable, so a key element of information security is to reduce the attack surface of a system.</p>
+<p>Wikipedia has a good definition of "attack surface":</p>
+<blockquote>
+<p>"The attack surface of a software environment is the code within a computer system that can be run by unauthorized users. This includes, but is not limited to: user input fields, protocols, interfaces, and services. OSSTMM 3 Defines Attack Surface as 'The lack of specific separations and functional controls that exist for that vector'. One approach to improving information security is to reduce the attack surface of a system or software. By turning off unnecessary functionality, there are fewer security risks. By having less code available to unauthorized actors, there will tend to be fewer failures. Although attack surface reduction helps prevent security failures, it does not mitigate the amount of damage an attacker could inflict once a vulnerability is found."</p>
+</blockquote>
+<p><a href="http://www.ghost.org">Ghost</a> is some fantastic software but will inevitably have security vulnerabilities, especially in the complex pieces within the administration functions. It would be a good idea to reduce Ghost's attack surface by restricting what systems can even access the administrative portion of Ghost, and access controls within Nginx allow us to do so if we are using Nginx to proxy connections to Ghost.</p>
+<p>Access controls within Nginix are pretty straightforward. For example, if you want to allow a specific IP address to access a portion of your site, but deny all others, you'd define the location and access controls within the server block:</p>
+<div class="highlight"><pre><span></span><span class="err">server {</span>
+<span class="err">    ...</span>
+<span class="err">    location /mysecretlocation/ {</span>
+<span class="err">        allow 1.1.1.1;</span>
+<span class="err">        deny all;</span>
+<span class="err">    }</span>
+<span class="err">    ...</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p>That's pretty straightforward, causing Nginx to allow connections to www.example.com/mysecretlocation by the IP address 1.1.1.1, while kicking a 403 Forbidden message to all others.</p>
+<p>This gets a little different when using Nginx to proxy connections to Ghost, but it is still pretty straightforward - we just need to add the proxy information to the location block, like this:</p>
+<div class="highlight"><pre><span></span><span class="err">server {</span>
+<span class="err">    ...</span>
+<span class="err">    location /ghost/ {</span>
+<span class="err">        allow 1.1.1.1;</span>
+<span class="err">        deny all;</span>
+<span class="err">        proxy_set_header   X-Real-IP $remote_addr;</span>
+<span class="err">        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;</span>
+<span class="err">        proxy_set_header   X-Forwarded-Proto $scheme;</span>
+<span class="err">        proxy_set_header   Host $http_host;</span>
+<span class="err">        proxy_set_header   Connection &quot;&quot;;</span>
+<span class="err">        proxy_http_version 1.1;</span>
+<span class="err">        proxy_pass         http://ghost_upstream_defined_in_nginx_conf;</span>
+<span class="err">    }</span>
+<span class="err">    ...</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p>This config does the same thing as before but applies it to the proxy for Ghost, which is important since the URI of <code>/ghost/signin</code> doesn't actually exist in the website's directory root, but is only understood by Ghost. However, if an IP other than 1.1.1.1 were to go to www.mywebsite.com/ghost/signin, they would get a 403 Forbidden message.</p>
+<p>Now, when a vulnerability is identified that affects Ghost's administration functionality, the website's exposure to that vulnerability should be greatly reduced.</p>
+<p>If you have any feedback or questions, contact me on Twitter at <a href="http://twitter.com/codyhatch">@codyhatch</a> until I get my contact page up on this site.</p>
 </div>
     <aside>
     <div class="bug-reporting__panel">

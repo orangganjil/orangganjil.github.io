@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <title>DNS Registrar Checker - Tools</title>
+    <title>Analyzing LDS President Russell Nelson Talks About Family - Data Science</title>
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -35,7 +35,7 @@
     <![endif]-->
         
 
-    <meta name="tags" content="Security" />
+    <meta name="tags" content="Religion" />
 
 </head>
 
@@ -97,30 +97,24 @@
 <section id="content" class="body">
     <header>
     <h1>
-      DNS Registrar Checker
+      Analyzing LDS President Russell Nelson Talks About Family
     </h1>
 <ol class="breadcrumb">
     <li>
-        <time class="published" datetime="2015-08-14T19:35:00-06:00">
-            14 August 2015
+        <time class="published" datetime="2018-02-20T23:00:00-07:00">
+            20 February 2018
         </time>
     </li>
-    <li>Tools</li>
-    <li>Security</li>
+    <li>Data Science</li>
+    <li>Religion</li>
 </ol>
 </header>
 <div class='article_content'>
-<p>I wrote a basic, hacked together Perl script to check domain registrar information and determine whether the DNS for your domain has been hijacked. I wrote the script a while ago in Perl and, since it works fine, I haven't bothered to change it.</p>
-<p>There are a few key things to note:</p>
-<ul>
-<li>You'll need to adjust some of the variables to fit your environment (e.g., domains, allowed IPs for DNS servers, etc.).</li>
-<li>I recommend that this run on a server or something where you can schedule it via cron to run at regular intervals.</li>
-<li>I recommend that you include administrative emails for notification that are not part of the domains this script monitors.</li>
-<li>If possible, run this from a server that can utilize split DNS to avoid any potential issues if the admin domains are hijacked.</li>
-</ul>
-<p>Again, this is a quickly hacked-together script but it works.</p>
-<p>Enjoy.</p>
-<p>The code is available at the <a href="https://github.com/orangganjil/dns-registrar-checker">GitHub repo</a>.</p>
+<p>Several friends and I were recently discussing whether Wendy Watson Nelson has affected the topics about which LDS President Russell Nelson has chosen to speak, so I decided to perform a quick analysis of his General Conference talks going back to 1995.</p>
+<p>First, though, for those unfamiliar with why we would be interested in this question, I’ll give a bit of background. According to <a href="https://www.mormonnewsroom.org/article/elder-russell-m.-nelson-marries-wendy-l.-watson">LDS Newsroom</a>, President Russell Nelson and Wendy Watson Nelson were married April 6, 2006. Wendy Watson was President Nelson’s second wife. His first wife was Dantzel White Nelson, who died February 12, 2005.</p>
+<p>Sister Wendy Watson Nelson was a professor of marriage and family therapy at BYU prior to her marriage to President Nelson, and had written several books about relationships, marriage, and family. Since they have been married, she, along with President Nelson, has spoken at several firesides and face-to-face events, most recently in Las Vegas, Nevada. She frequently provides marriage and relationship advice at these events. She is highly educated, has teaching experience in these topics, is willing to speak frequently on these topics, and is much younger than President Nelson. Naturally, we were curious as to what type of influence, if any, she might have on President Nelson’s talks.</p>
+<p>Since President and Sister Nelson were married in April 2006, in performing my analysis I had initially thought I’d grab all of President Nelson’s talks going back to 1995 so as to get a similar number of years pre-marriage as there are available post-marriage; however, I was unable to find any way on lds.org to sort President Nelson’s talks chronologically. I had considered sucking down all of his talks from the site and sorting them myself, but was reluctant to do so due to potential loads that might place on the Church’s web servers (there are a lot of talks). It just seemed like I’d be crossing some line, so I settled on General Conference talks. I downloaded all of President Nelson’s General Conference talks going back to April 1995 and ran them through a tool that performs a word count on the text. I kept the top ten words used in each talk and added them to a data frame within a Python program. Finally, I filtered the talks for words associated with marriage and family (the areas of Sister Nelson’s expertise), and then graphed them on a time series chart along with a reference line for the Nelson’s marriage.</p>
+<p><img alt="svg" src="../images/pres-nelson-family.svg"></p>
 </div>
     <aside>
     <div class="bug-reporting__panel">

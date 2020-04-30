@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <title>DNS Registrar Checker - Tools</title>
+    <title>US Mean Income - Data Science</title>
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -35,7 +35,7 @@
     <![endif]-->
         
 
-    <meta name="tags" content="Security" />
+    <meta name="tags" content="US" />
 
 </head>
 
@@ -97,30 +97,27 @@
 <section id="content" class="body">
     <header>
     <h1>
-      DNS Registrar Checker
+      US Mean Income
     </h1>
 <ol class="breadcrumb">
     <li>
-        <time class="published" datetime="2015-08-14T19:35:00-06:00">
-            14 August 2015
+        <time class="published" datetime="2018-09-24T04:00:00-06:00">
+            24 September 2018
         </time>
     </li>
-    <li>Tools</li>
-    <li>Security</li>
+    <li>Data Science</li>
+    <li>US</li>
 </ol>
 </header>
 <div class='article_content'>
-<p>I wrote a basic, hacked together Perl script to check domain registrar information and determine whether the DNS for your domain has been hijacked. I wrote the script a while ago in Perl and, since it works fine, I haven't bothered to change it.</p>
-<p>There are a few key things to note:</p>
+<p>There is a growing income disparity in the United States, which I find very worrisome. It doesn't seem sustainable and creates a nation of haves and have-nots.</p>
+<p>The graph below shows US mean household income, in 2017 CPI adjusted dollars, from 1967 to 2017. It is broken into quintiles and includes the top five percent of earners for comparison. I’ve also added the percentage growth for each line during the 50-year timespan.</p>
+<p>I also calculated the ratio of “top five percent”-to-“lowest quintile” for 1967 and 2017.</p>
 <ul>
-<li>You'll need to adjust some of the variables to fit your environment (e.g., domains, allowed IPs for DNS servers, etc.).</li>
-<li>I recommend that this run on a server or something where you can schedule it via cron to run at regular intervals.</li>
-<li>I recommend that you include administrative emails for notification that are not part of the domains this script monitors.</li>
-<li>If possible, run this from a server that can utilize split DNS to avoid any potential issues if the admin domains are hijacked.</li>
+<li><strong>1967:</strong> 17.5/1</li>
+<li><strong>2017:</strong> 29.0/1</li>
 </ul>
-<p>Again, this is a quickly hacked-together script but it works.</p>
-<p>Enjoy.</p>
-<p>The code is available at the <a href="https://github.com/orangganjil/dns-registrar-checker">GitHub repo</a>.</p>
+<p><img alt="svg" src="../images/us-mean-income.svg"></p>
 </div>
     <aside>
     <div class="bug-reporting__panel">

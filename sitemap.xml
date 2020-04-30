@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://codyhatch.com/</loc>
-<lastmod>2020-04-29T20:29:08-00:00</lastmod>
+<lastmod>2020-04-29T21:08:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -18,70 +18,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://codyhatch.com/blog/news-and-podcast-episode-2019-07.html</loc>
-<lastmod>2019-07-31T23:00:00-06:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://codyhatch.com/data-analysis/us-mean-income.html</loc>
+<loc>https://codyhatch.com/data-science/us-mean-income.html</loc>
 <lastmod>2018-09-24T04:00:00-06:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://codyhatch.com/data-analysis/us-federal-income-spending.html</loc>
+<loc>https://codyhatch.com/data-science/us-federal-income-spending.html</loc>
 <lastmod>2018-03-25T19:35:00-06:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://codyhatch.com/data-analysis/analyzing-lds-president-russell-nelson-talks-family.html</loc>
+<loc>https://codyhatch.com/data-science/analyzing-lds-president-russell-nelson-talks-family.html</loc>
 <lastmod>2018-02-20T23:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://codyhatch.com/data-analysis/analyzing-oaks-ballard-face-to-face-questions.html</loc>
+<loc>https://codyhatch.com/data-science/analyzing-oaks-ballard-face-to-face-questions.html</loc>
 <lastmod>2017-11-16T19:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://codyhatch.com/information-security/nginx-good-https-configuration.html</loc>
+<loc>https://codyhatch.com/cyber-security/nginx-good-https-configuration.html</loc>
 <lastmod>2017-10-05T22:30:00-06:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://codyhatch.com/blog/recent-updates-2017-09.html</loc>
-<lastmod>2017-09-30T23:00:00-06:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://codyhatch.com/projects/lending-club-default-predictor.html</loc>
+<loc>https://codyhatch.com/data-science/lending-club-default-predictor.html</loc>
 <lastmod>2017-08-23T17:35:00-06:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://codyhatch.com/data-analysis/chlamydia-utah.html</loc>
-<lastmod>2016-09-22T04:10:00-06:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://codyhatch.com/data-analysis/utah-energy-production.html</loc>
+<loc>https://codyhatch.com/data-science/utah-energy-production.html</loc>
 <lastmod>2016-09-14T19:35:00-06:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -116,14 +95,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://codyhatch.com/information-security/nginx-protect-ghost-login.html</loc>
+<loc>https://codyhatch.com/cyber-security/nginx-protect-ghost-login.html</loc>
 <lastmod>2013-10-25T12:35:00-06:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://codyhatch.com/information-security/nginx-remove-version-number.html</loc>
+<loc>https://codyhatch.com/cyber-security/nginx-remove-version-number.html</loc>
 <lastmod>2013-10-24T12:06:00-06:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>

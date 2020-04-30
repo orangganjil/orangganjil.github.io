@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <title>DNS Registrar Checker - Tools</title>
+    <title>US Federal Income and Spending - Data Science</title>
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -35,7 +35,7 @@
     <![endif]-->
         
 
-    <meta name="tags" content="Security" />
+    <meta name="tags" content="US" />
 
 </head>
 
@@ -97,30 +97,23 @@
 <section id="content" class="body">
     <header>
     <h1>
-      DNS Registrar Checker
+      US Federal Income and Spending
     </h1>
 <ol class="breadcrumb">
     <li>
-        <time class="published" datetime="2015-08-14T19:35:00-06:00">
-            14 August 2015
+        <time class="published" datetime="2018-03-25T19:35:00-06:00">
+            25 March 2018
         </time>
     </li>
-    <li>Tools</li>
-    <li>Security</li>
+    <li>Data Science</li>
+    <li>US</li>
 </ol>
 </header>
 <div class='article_content'>
-<p>I wrote a basic, hacked together Perl script to check domain registrar information and determine whether the DNS for your domain has been hijacked. I wrote the script a while ago in Perl and, since it works fine, I haven't bothered to change it.</p>
-<p>There are a few key things to note:</p>
-<ul>
-<li>You'll need to adjust some of the variables to fit your environment (e.g., domains, allowed IPs for DNS servers, etc.).</li>
-<li>I recommend that this run on a server or something where you can schedule it via cron to run at regular intervals.</li>
-<li>I recommend that you include administrative emails for notification that are not part of the domains this script monitors.</li>
-<li>If possible, run this from a server that can utilize split DNS to avoid any potential issues if the admin domains are hijacked.</li>
-</ul>
-<p>Again, this is a quickly hacked-together script but it works.</p>
-<p>Enjoy.</p>
-<p>The code is available at the <a href="https://github.com/orangganjil/dns-registrar-checker">GitHub repo</a>.</p>
+<p>Part of being an informed citizen of the United States is to understand in what ways the federal government spends the money it collects, as well as the sources of government revenue. To aid in that understanding, I have provided three basic charts covering overall surplus/deficit, receipts, and expenses for the US federal government.</p>
+<p><img alt="svg" src="../images/us-federal-income-spending/fed-surplus-deficit.svg"></p>
+<p><img alt="svg" src="../images/us-federal-income-spending/fed-receipts.svg"></p>
+<p><img alt="svg" src="../images/us-federal-income-spending/fed-spending.svg"></p>
 </div>
     <aside>
     <div class="bug-reporting__panel">

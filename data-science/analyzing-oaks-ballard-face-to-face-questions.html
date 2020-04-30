@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <title>DNS Registrar Checker - Tools</title>
+    <title>Analyzing Questions for Oaks and Ballard Face-to-Face - Data Science</title>
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -35,7 +35,7 @@
     <![endif]-->
         
 
-    <meta name="tags" content="Security" />
+    <meta name="tags" content="Religion" />
 
 </head>
 
@@ -97,30 +97,23 @@
 <section id="content" class="body">
     <header>
     <h1>
-      DNS Registrar Checker
+      Analyzing Questions for Oaks and Ballard Face-to-Face
     </h1>
 <ol class="breadcrumb">
     <li>
-        <time class="published" datetime="2015-08-14T19:35:00-06:00">
-            14 August 2015
+        <time class="published" datetime="2017-11-16T19:00:00-07:00">
+            16 November 2017
         </time>
     </li>
-    <li>Tools</li>
-    <li>Security</li>
+    <li>Data Science</li>
+    <li>Religion</li>
 </ol>
 </header>
 <div class='article_content'>
-<p>I wrote a basic, hacked together Perl script to check domain registrar information and determine whether the DNS for your domain has been hijacked. I wrote the script a while ago in Perl and, since it works fine, I haven't bothered to change it.</p>
-<p>There are a few key things to note:</p>
-<ul>
-<li>You'll need to adjust some of the variables to fit your environment (e.g., domains, allowed IPs for DNS servers, etc.).</li>
-<li>I recommend that this run on a server or something where you can schedule it via cron to run at regular intervals.</li>
-<li>I recommend that you include administrative emails for notification that are not part of the domains this script monitors.</li>
-<li>If possible, run this from a server that can utilize split DNS to avoid any potential issues if the admin domains are hijacked.</li>
-</ul>
-<p>Again, this is a quickly hacked-together script but it works.</p>
-<p>Enjoy.</p>
-<p>The code is available at the <a href="https://github.com/orangganjil/dns-registrar-checker">GitHub repo</a>.</p>
+<p>There is an upcoming event in the LDS Church (Mormon Church) where two leaders from the Church's hierarchy will answer questions submitted by some of the young single adults in the Church. There are about 2,600 questions submitted thus far and they are posted to a website. I wrote a Python script to scrape the questions and do text analysis on their content.</p>
+<p>I stemmed and tokenized the words, ran them through a count vectorizer to get term counts, and then performed <a href="http://scikit-learn.org/stable/modules/decomposition.html#nmf">non-negative matrix factorization</a> to group the texts into topics. I then performed NMF on subsets of the questions which had been filtered according to various topics or keywords.</p>
+<p>I posted my analysis at Wheat &amp; Tares:</p>
+<p><a href="https://wheatandtares.org/2017/11/15/analyzing-ballard-and-oaks-face-to-face-questions/">Analyzing Ballard and Oaks Face-to-Face Questions</a></p>
 </div>
     <aside>
     <div class="bug-reporting__panel">

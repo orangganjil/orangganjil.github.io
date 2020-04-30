@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <title>DNS Registrar Checker - Tools</title>
+    <title>Nginx Tip - Remove Version Number - Cyber Security</title>
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -35,7 +35,7 @@
     <![endif]-->
         
 
-    <meta name="tags" content="Security" />
+    <meta name="tags" content="Application" />
 
 </head>
 
@@ -97,30 +97,29 @@
 <section id="content" class="body">
     <header>
     <h1>
-      DNS Registrar Checker
+      Nginx Tip - Remove Version Number
     </h1>
 <ol class="breadcrumb">
     <li>
-        <time class="published" datetime="2015-08-14T19:35:00-06:00">
-            14 August 2015
+        <time class="published" datetime="2013-10-24T12:06:00-06:00">
+            24 October 2013
         </time>
     </li>
-    <li>Tools</li>
-    <li>Security</li>
+    <li>Cyber Security</li>
+    <li>Application</li>
 </ol>
 </header>
 <div class='article_content'>
-<p>I wrote a basic, hacked together Perl script to check domain registrar information and determine whether the DNS for your domain has been hijacked. I wrote the script a while ago in Perl and, since it works fine, I haven't bothered to change it.</p>
-<p>There are a few key things to note:</p>
-<ul>
-<li>You'll need to adjust some of the variables to fit your environment (e.g., domains, allowed IPs for DNS servers, etc.).</li>
-<li>I recommend that this run on a server or something where you can schedule it via cron to run at regular intervals.</li>
-<li>I recommend that you include administrative emails for notification that are not part of the domains this script monitors.</li>
-<li>If possible, run this from a server that can utilize split DNS to avoid any potential issues if the admin domains are hijacked.</li>
-</ul>
-<p>Again, this is a quickly hacked-together script but it works.</p>
-<p>Enjoy.</p>
-<p>The code is available at the <a href="https://github.com/orangganjil/dns-registrar-checker">GitHub repo</a>.</p>
+<p>I wanted to give another quick tip in the process of hardening the security of Nginx.</p>
+<p>There are a bunch of things one can do to manage and limit connections, and they're good, but something that is often overlooked is removing the version number of the web server. This isn't a security-through-obscurity thing, but rather taking whatever easy steps one can take to make things even a little bit tougher for an attacker.</p>
+<p>For example, if there is a vulnerability in a specific version of Nginx, it makes sense not to broadcast the version number running on one's server to the world, allowing anyone paying attention to easily determine whether your server is vulnerable.</p>
+<p>Of course, one can go to great lengths and change the server software name altogether by modifying Nginx's source code and recompiling, but I'm going to limit this suggestion to something that is easy and within the reach of every web admin out there.</p>
+<p>To configure Nginx to stop listing its version number in error pages and HTTP headers, add the following line to the server block in your configuration file:</p>
+<div class="highlight"><pre><span></span><span class="n">server_tokens</span><span class="o">:</span> <span class="n">off</span><span class="o">;</span>
+</pre></div>
+
+
+<p>That's all that needs to be done. Now, Nginx will only list the fact that it is an Nginx server, but exclude the version in HTTP headers and error pages.</p>
 </div>
     <aside>
     <div class="bug-reporting__panel">
