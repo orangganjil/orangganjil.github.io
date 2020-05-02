@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://codyhatch.com/</loc>
-<lastmod>2020-04-29T21:30:25-00:00</lastmod>
+<lastmod>2020-05-02T00:03:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -18,15 +18,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://codyhatch.com/data-science/us-mean-income.html</loc>
-<lastmod>2018-09-24T04:00:00-06:00</lastmod>
+<loc>https://codyhatch.com/data-science/us-federal-income-spending.html</loc>
+<lastmod>2020-05-02T05:35:00-06:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://codyhatch.com/data-science/us-federal-income-spending.html</loc>
-<lastmod>2018-03-25T19:35:00-06:00</lastmod>
+<loc>https://codyhatch.com/data-science/us-mean-income.html</loc>
+<lastmod>2018-09-24T04:00:00-06:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
