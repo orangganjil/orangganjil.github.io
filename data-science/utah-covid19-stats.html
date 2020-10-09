@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <title>Nginx Tip - Remove Version Number - Cyber Security</title>
+    <title>Utah COVID-19 Statistics - Data Science</title>
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -35,7 +35,7 @@
     <![endif]-->
         
 
-    <meta name="tags" content="Application" />
+    <meta name="tags" content="Utah" />
 
 </head>
 
@@ -97,28 +97,27 @@
 <section id="content" class="body">
     <header>
     <h1>
-      Nginx Tip - Remove Version Number
+      Utah COVID-19 Statistics
     </h1>
 <ol class="breadcrumb">
     <li>
-        <time class="published" datetime="2013-10-24T12:06:00-06:00">
-            24 October 2013
+        <time class="published" datetime="2020-10-09T00:35:00-06:00">
+            09 October 2020
         </time>
     </li>
-    <li>Cyber Security</li>
-    <li>Application</li>
+    <li>Data Science</li>
+    <li>Utah</li>
 </ol>
 </header>
 <div class='article_content'>
-<p>I wanted to give another quick tip in the process of hardening the security of Nginx.</p>
-<p>There are a bunch of things one can do to manage and limit connections, and they're good, but something that is often overlooked is removing the version number of the web server. This isn't a security-through-obscurity thing, but rather taking whatever easy steps one can take to make things even a little bit tougher for an attacker.</p>
-<p>For example, if there is a vulnerability in a specific version of Nginx, it makes sense not to broadcast the version number running on one's server to the world, allowing anyone paying attention to easily determine whether your server is vulnerable.</p>
-<p>Of course, one can go to great lengths and change the server software name altogether by modifying Nginx's source code and recompiling, but I'm going to limit this suggestion to something that is easy and within the reach of every web admin out there.</p>
-<p>To configure Nginx to stop listing its version number in error pages and HTTP headers, add the following line to the server block in your configuration file:</p>
-<div class="highlight"><pre><span></span><code><span class="n">server_tokens</span><span class="o">:</span> <span class="n">off</span><span class="o">;</span>
-</code></pre></div>
+<p>COVID-19 in Utah, like everywhere else, has been a story of tragedy and heroism (especially the healthcare workers, people staffing food banks, and other essential workers). I am interested in some basic statistics regarding the virus in Utah, which I have placed here along with some commentary; however, it is imperative to remember that every death and painful recovery creates a web of grief. These numbers represent human tragedy, so take a moment to reach out to a loved one you know has been affected, and remind them of your love for them.</p>
+<div class="flourish-embed flourish-chart" data-src="visualisation/3957738" data-url="https://flo.uri.sh/visualisation/3957738/embed" aria-label=""><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-<p>That's all that needs to be done. Now, Nginx will only list the fact that it is an Nginx server, but exclude the version in HTTP headers and error pages.</p>
+<p>I have heard many acquaintances advocate letting things play out to achieve herd immunity. While the numbers needing to be infected in order to achieve herd immunity vary with each virus, studies have predicted that COVID-19 would require approximately a 70% infection rate in order for a community to reach herd immunity. Currently 1 in 80 Utahans have been infected, resulting in 81,947 infected and 501 dead, for a mortality rate of 0.61%. Utah has a population of 3,200,000 and 70% of that population would be 2,240,000. If 0.61% of that population were to die from the disease, it would represent 13,695 deaths - more than all other causes combined.</p>
+<div class="flourish-embed flourish-chart" data-src="visualisation/3958146" data-url="https://flo.uri.sh/visualisation/3958146/embed" aria-label=""><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+<p>I also was curious how Utah's mortality rate stacks up against several other western states. Interestingly, Utah compares very favorably, especially considering the large population in metropolitan centers. I'm not sure why this is so, but it is interesting nonetheless.</p>
+<div class="flourish-embed flourish-chart" data-src="visualisation/3958406" data-url="https://flo.uri.sh/visualisation/3958406/embed" aria-label=""><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 </div>
     <aside>
     <div class="bug-reporting__panel">
