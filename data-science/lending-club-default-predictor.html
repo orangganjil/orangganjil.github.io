@@ -136,14 +136,14 @@
 <p>The API will then load the loans into a Pandas DataFrame, make some modifications, and then run them through the Random Forest Classifier model. It then will add another column to the DataFrame for the predicted probability of default/charge-off. Finally, the API will then return JSON output of the memberId and probability of default for each loan that was input.</p>
 <h2>Machine Learning Model</h2>
 <p>The machine learning model is a Random Forest Classifier trained on all Lending Club loans from 2007 through the first half of 2017. It has the following parameters:</p>
-<div class="highlight"><pre><span></span><code><span class="err">RandomForestClassifier(bootstrap=True, class_weight=&#39;balanced&#39;,</span>
-<span class="err">            criterion=&#39;gini&#39;, max_depth=None, max_features=&#39;auto&#39;,</span>
-<span class="err">            max_leaf_nodes=None, min_impurity_split=1e-07,</span>
-<span class="err">            min_samples_leaf=5, min_samples_split=2,</span>
-<span class="err">            min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=3,</span>
-<span class="err">            oob_score=False, random_state=None, verbose=0,</span>
-<span class="err">            warm_start=False)</span>
-</code></pre></div>
+<div class="highlight"><pre><span></span>RandomForestClassifier(bootstrap=True, class_weight=&#39;balanced&#39;,
+            criterion=&#39;gini&#39;, max_depth=None, max_features=&#39;auto&#39;,
+            max_leaf_nodes=None, min_impurity_split=1e-07,
+            min_samples_leaf=5, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=3,
+            oob_score=False, random_state=None, verbose=0,
+            warm_start=False)
+</pre></div>
 
 <p>Below is the confusion matrix followed by the accuracy, AUC, precision, and recall scores for the model:</p>
 <table>
@@ -164,12 +164,12 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight"><pre><span></span><code><span class="n">Accuracy</span><span class="o">:</span> <span class="mf">0.933942838316</span>
+<div class="highlight"><pre><span></span><span class="n">Accuracy</span><span class="o">:</span> <span class="mf">0.933942838316</span>
 <span class="n">Error</span><span class="o">:</span> <span class="mf">0.0660571616836</span>
 <span class="n">AUC</span><span class="o">:</span> <span class="mf">0.919982188297</span>
 <span class="n">Precision</span><span class="o">:</span> <span class="mf">0.782893165863</span>
 <span class="n">Recall</span><span class="o">:</span> <span class="mf">0.897607183924</span>
-</code></pre></div>
+</pre></div>
 
 <p>If you are unfamiliar with a confusion matrix, in a binary decision such as whether an account is likely to default, the matrix lists in the first column the number of true positives over false positives. The second column lists the number of false negatives over true negatives. Ideally, one would like the numbers to be greatest going diagonally from top-left to bottom-right, with zeros in the other two cells.</p>
 <p>You can read more about a confusion matrix on <a href="https://en.wikipedia.org/wiki/Confusion_matrix">Wikipedia</a>.</p>
