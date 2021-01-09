@@ -115,8 +115,9 @@
 <p>For example, if there is a vulnerability in a specific version of Nginx, it makes sense not to broadcast the version number running on one's server to the world, allowing anyone paying attention to easily determine whether your server is vulnerable.</p>
 <p>Of course, one can go to great lengths and change the server software name altogether by modifying Nginx's source code and recompiling, but I'm going to limit this suggestion to something that is easy and within the reach of every web admin out there.</p>
 <p>To configure Nginx to stop listing its version number in error pages and HTTP headers, add the following line to the server block in your configuration file:</p>
-<div class="highlight"><pre><span></span><span class="n">server_tokens</span><span class="o">:</span> <span class="n">off</span><span class="o">;</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">server_tokens</span><span class="o">:</span> <span class="n">off</span><span class="o">;</span>
+</code></pre></div>
+
 
 <p>That's all that needs to be done. Now, Nginx will only list the fact that it is an Nginx server, but exclude the version in HTTP headers and error pages.</p>
 </div>
@@ -134,7 +135,7 @@
         <div class="container">
             <p class="text-muted">
                 <center>
-                Copyright &copy; Cody Hatch, 2009-2020
+                Copyright &copy; Cody Hatch, 2009-2021
                 </center>
             </p>
         </div>
