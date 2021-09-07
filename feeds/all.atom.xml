@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cody Hatch</title><link href="https://codyhatch.com/" rel="alternate"></link><link href="https://codyhatch.com/feeds/all.atom.xml" rel="self"></link><id>https://codyhatch.com/</id><updated>2020-11-30T22:00:00-07:00</updated><entry><title>Utah COVID-19 Statistics</title><link href="https://codyhatch.com/data-science/utah-covid19-stats.html" rel="alternate"></link><published>2020-11-30T22:00:00-07:00</published><updated>2020-11-30T22:00:00-07:00</updated><author><name>Cody Hatch</name></author><id>tag:codyhatch.com,2020-11-30:/data-science/utah-covid19-stats.html</id><summary type="html">&lt;p&gt;Reviewing COVID-19 statistics for Utah.&lt;/p&gt;</summary><content type="html">&lt;p&gt;COVID-19 in Utah, like everywhere else, has been a story of tragedy and heroism (especially the healthcare workers, people staffing food banks, and other essential workers). I am interested in some basic statistics regarding the virus in Utah, which I have placed here along with some commentary; however, it is imperative to remember that every death and painful recovery creates a web of grief. These numbers represent human tragedy, so take a moment to reach out to a loved one you know has been affected, and remind them of your love for them.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cody Hatch</title><link href="https://codyhatch.com/" rel="alternate"></link><link href="https://codyhatch.com/feeds/all.atom.xml" rel="self"></link><id>https://codyhatch.com/</id><updated>2021-01-10T22:00:00-07:00</updated><subtitle></subtitle><entry><title>Utah COVID-19 Statistics</title><link href="https://codyhatch.com/data-science/utah-covid19-stats.html" rel="alternate"></link><published>2021-01-10T22:00:00-07:00</published><updated>2021-01-10T22:00:00-07:00</updated><author><name>Cody Hatch</name></author><id>tag:codyhatch.com,2021-01-10:/data-science/utah-covid19-stats.html</id><summary type="html">&lt;p&gt;Reviewing COVID-19 statistics for Utah.&lt;/p&gt;</summary><content type="html">&lt;p&gt;COVID-19 in Utah, like everywhere else, has been a story of tragedy and heroism (especially the healthcare workers, people staffing food banks, and other essential workers). I am interested in some basic statistics regarding the virus in Utah, which I have placed here along with some commentary; however, it is imperative to remember that every death and painful recovery creates a web of grief. These numbers represent human tragedy, so take a moment to reach out to a loved one you know has been affected, and remind them of your love for them.&lt;/p&gt;
 &lt;div class="flourish-embed flourish-chart" data-src="visualisation/3957738" data-url="https://flo.uri.sh/visualisation/3957738/embed" aria-label=""&gt;&lt;script src="https://public.flourish.studio/resources/embed.js"&gt;&lt;/script&gt;&lt;/div&gt;
 
-&lt;p&gt;I have heard many acquaintances advocate letting things play out to achieve herd immunity. While the numbers needing to be infected in order to achieve herd immunity vary with each virus, studies have predicted that COVID-19 would require approximately a 70% infection rate in order for a community to reach herd immunity. Currently in Utah there have been about 196,000 people infected and 871 fatalities, for a mortality rate of 0.44%. Utah has a population of 3,200,000 and 70% of that population would be 2,240,000. If 0.44% of that population were to die from the disease, it would represent 10,800 deaths - more than all other causes combined.&lt;/p&gt;
+&lt;p&gt;I have heard many acquaintances advocate letting things play out to achieve herd immunity. While the numbers needing to be infected in order to achieve herd immunity vary with each virus, studies have predicted that COVID-19 would require approximately a 70% infection rate in order for a community to reach herd immunity. Currently in Utah there have been about 306,000 people infected and 1,393 fatalities, for a mortality rate of 0.46%. Utah has a population of 3,200,000 and 70% of that population would be 2,240,000. If 0.46% of that population were to die from the disease, it would represent 10,197 deaths - almost more than all other causes combined.&lt;/p&gt;
 &lt;div class="flourish-embed flourish-chart" data-src="visualisation/3958146" data-url="https://flo.uri.sh/visualisation/3958146/embed" aria-label=""&gt;&lt;script src="https://public.flourish.studio/resources/embed.js"&gt;&lt;/script&gt;&lt;/div&gt;
 
 &lt;p&gt;I also was curious how Utah's mortality rate stacks up against several other western states. Interestingly, Utah compares very favorably, especially considering the large population in metropolitan centers. I'm not sure why this is so, but it is interesting nonetheless.&lt;/p&gt;
@@ -45,7 +45,6 @@
     &lt;span class="err"&gt;...&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;The first portion of the configuration tells the server on which ports to listen, the web root directory, and the paths to your SSL certificates. I'll briefly describe the other lines.&lt;/p&gt;
 &lt;h4&gt;ssl_protocols&lt;/h4&gt;
@@ -97,7 +96,6 @@
 &lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;After all this is done, head over to the &lt;a href="https://www.ssllabs.com/ssltest/"&gt;SSL Server Test&lt;/a&gt; run by Qualys SSL Labs. Enter your site and see what grade you receive.&lt;/p&gt;</content><category term="Cyber Security"></category><category term="Application"></category><category term="web"></category><category term="cyber security"></category></entry><entry><title>Lending Club Machine Learning Model and API</title><link href="https://codyhatch.com/data-science/lending-club-default-predictor.html" rel="alternate"></link><published>2017-08-23T17:35:00-06:00</published><updated>2017-08-23T17:35:00-06:00</updated><author><name>Cody Hatch</name></author><id>tag:codyhatch.com,2017-08-23:/data-science/lending-club-default-predictor.html</id><summary type="html">&lt;p&gt;Lending Club machine learning model and API for predicting loan defaults&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is an API that provides a probability of default when presented a loan from Lending Club. The API is written in Flask and it utilizes a scikit-learn machine learning model.&lt;/p&gt;
 &lt;p&gt;You can get the code for this at the &lt;a href="https://github.com/orangganjil/lendingclub-default-predictor"&gt;GitHub repo&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Prerequisites&lt;/h2&gt;
@@ -133,7 +131,6 @@
 &lt;span class="err"&gt;            warm_start=False)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Below is the confusion matrix followed by the accuracy, AUC, precision, and recall scores for the model:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -160,7 +157,6 @@
 &lt;span class="n"&gt;Recall&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;0.897607183924&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;If you are unfamiliar with a confusion matrix, in a binary decision such as whether an account is likely to default, the matrix lists in the first column the number of true positives over false positives. The second column lists the number of false negatives over true negatives. Ideally, one would like the numbers to be greatest going diagonally from top-left to bottom-right, with zeros in the other two cells.&lt;/p&gt;
 &lt;p&gt;You can read more about a confusion matrix on &lt;a href="https://en.wikipedia.org/wiki/Confusion_matrix"&gt;Wikipedia&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The two models used in the API are the following:&lt;/p&gt;
@@ -175,4 +171,61 @@
 &lt;p&gt;You can find the code at the &lt;a href="https://github.com/orangganjil/gen-conf-word-frequency"&gt;GitHub repo&lt;/a&gt; &lt;/p&gt;</content><category term="Tools"></category><category term="Analysis"></category></entry><entry><title>Writing Custom Splunk Apps</title><link href="https://codyhatch.com/presentations/writing-custom-splunk-apps-bsidesslc-2016-04.html" rel="alternate"></link><published>2016-04-15T01:00:00-06:00</published><updated>2016-04-15T01:00:00-06:00</updated><author><name>Cody Hatch</name></author><id>tag:codyhatch.com,2016-04-15:/presentations/writing-custom-splunk-apps-bsidesslc-2016-04.html</id><summary type="html">&lt;p&gt;Presentation on writing custom Splunk apps given at BSidesSLC in April 2016&lt;/p&gt;</summary><content type="html">&lt;p&gt;I gave a presentation at BSidesSLC 2016 titled "Writing Custom Splunk Apps", where I reviewed the basics of writing a custom app for Splunk.&lt;/p&gt;
 &lt;p&gt;Splunk is an incredibly useful data analysis and security tool, but getting the best out of it requires some organization and will inevitably require writing some custom apps to make use of that organization.&lt;/p&gt;
 &lt;p&gt;This presentation was intended to provide some of the basics to get one started writing custom apps for Splunk.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.google.com/presentation/d/1wdd8mDn2ECjsR6HqDqgZOL130_I_8ZZxK5vELlXxLn4/edit?usp=sharing"&gt;Check out the slide deck&lt;/a&gt;&lt;/p&gt;</content><category term="Presentations"></category><category term="Security"></category><category term="cyber security"></category><category term="SIEM"></category><category term="splunk"></category><category term="app"></category><category term="bsidesslc"></category></entry></feed>
+&lt;p&gt;&lt;a href="https://docs.google.com/presentation/d/1wdd8mDn2ECjsR6HqDqgZOL130_I_8ZZxK5vELlXxLn4/edit?usp=sharing"&gt;Check out the slide deck&lt;/a&gt;&lt;/p&gt;</content><category term="Presentations"></category><category term="Security"></category><category term="cyber security"></category><category term="SIEM"></category><category term="splunk"></category><category term="app"></category><category term="bsidesslc"></category></entry><entry><title>DNS Registrar Checker</title><link href="https://codyhatch.com/tools/dns-registrar-checker.html" rel="alternate"></link><published>2015-08-14T19:35:00-06:00</published><updated>2015-08-14T19:35:00-06:00</updated><author><name>Cody Hatch</name></author><id>tag:codyhatch.com,2015-08-14:/tools/dns-registrar-checker.html</id><summary type="html">&lt;p&gt;Script to check your domain registrar to see if your DNS has been hijacked.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I wrote a basic, hacked together Perl script to check domain registrar information and determine whether the DNS for your domain has been hijacked. I wrote the script a while ago in Perl and, since it works fine, I haven't bothered to change it.&lt;/p&gt;
+&lt;p&gt;There are a few key things to note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You'll need to adjust some of the variables to fit your environment (e.g., domains, allowed IPs for DNS servers, etc.).&lt;/li&gt;
+&lt;li&gt;I recommend that this run on a server or something where you can schedule it via cron to run at regular intervals.&lt;/li&gt;
+&lt;li&gt;I recommend that you include administrative emails for notification that are not part of the domains this script monitors.&lt;/li&gt;
+&lt;li&gt;If possible, run this from a server that can utilize split DNS to avoid any potential issues if the admin domains are hijacked.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Again, this is a quickly hacked-together script but it works.&lt;/p&gt;
+&lt;p&gt;Enjoy.&lt;/p&gt;
+&lt;p&gt;The code is available at the &lt;a href="https://github.com/orangganjil/dns-registrar-checker"&gt;GitHub repo&lt;/a&gt;.&lt;/p&gt;</content><category term="Tools"></category><category term="Security"></category></entry><entry><title>Application Security Preso at Hack Ogden</title><link href="https://codyhatch.com/presentations/application-security-hack-ogden-03-2015.html" rel="alternate"></link><published>2015-03-26T01:00:00-06:00</published><updated>2015-03-26T01:00:00-06:00</updated><author><name>Cody Hatch</name></author><id>tag:codyhatch.com,2015-03-26:/presentations/application-security-hack-ogden-03-2015.html</id><summary type="html">&lt;p&gt;Presentation on application security given at Hack Ogden on March 25th 2015&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here are the slides of the presentation I gave at &lt;a href="http://www.hackogden.org/"&gt;Hack Ogden&lt;/a&gt; today. It was a great crowd with great questions. It's always great to chat about security with those who are outside the infosec echo chamber, and the folks at Hack Ogden were a wonderful bunch with whom to chat.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.google.com/presentation/d/1SArHf8y72cIhCtkfl6C4U0ESAqKdCMeBdAftXeRG8pc/edit?usp=sharing"&gt;Nerding Out on Application Security&lt;/a&gt;&lt;/p&gt;</content><category term="Presentations"></category><category term="Security"></category><category term="cyber"></category><category term="application"></category><category term="web"></category><category term="development"></category></entry><entry><title>Configure Nginx to Protect Ghost Login Page</title><link href="https://codyhatch.com/cyber-security/nginx-protect-ghost-login.html" rel="alternate"></link><published>2013-10-25T12:35:00-06:00</published><updated>2013-10-25T12:35:00-06:00</updated><author><name>Cody Hatch</name></author><id>tag:codyhatch.com,2013-10-25:/cyber-security/nginx-protect-ghost-login.html</id><summary type="html">&lt;p&gt;How to configure Nginx to protect the Ghost login page when proxying to Node.js&lt;/p&gt;</summary><content type="html">&lt;p&gt;In information security, it is not possible to be correct all the time - things will break, controls will fail, and software bugs will exist; those things are inevitable, so a key element of information security is to reduce the attack surface of a system.&lt;/p&gt;
+&lt;p&gt;Wikipedia has a good definition of "attack surface":&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;"The attack surface of a software environment is the code within a computer system that can be run by unauthorized users. This includes, but is not limited to: user input fields, protocols, interfaces, and services. OSSTMM 3 Defines Attack Surface as 'The lack of specific separations and functional controls that exist for that vector'. One approach to improving information security is to reduce the attack surface of a system or software. By turning off unnecessary functionality, there are fewer security risks. By having less code available to unauthorized actors, there will tend to be fewer failures. Although attack surface reduction helps prevent security failures, it does not mitigate the amount of damage an attacker could inflict once a vulnerability is found."&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://www.ghost.org"&gt;Ghost&lt;/a&gt; is some fantastic software but will inevitably have security vulnerabilities, especially in the complex pieces within the administration functions. It would be a good idea to reduce Ghost's attack surface by restricting what systems can even access the administrative portion of Ghost, and access controls within Nginx allow us to do so if we are using Nginx to proxy connections to Ghost.&lt;/p&gt;
+&lt;p&gt;Access controls within Nginix are pretty straightforward. For example, if you want to allow a specific IP address to access a portion of your site, but deny all others, you'd define the location and access controls within the server block:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;server {&lt;/span&gt;
+&lt;span class="err"&gt;    ...&lt;/span&gt;
+&lt;span class="err"&gt;    location /mysecretlocation/ {&lt;/span&gt;
+&lt;span class="err"&gt;        allow 1.1.1.1;&lt;/span&gt;
+&lt;span class="err"&gt;        deny all;&lt;/span&gt;
+&lt;span class="err"&gt;    }&lt;/span&gt;
+&lt;span class="err"&gt;    ...&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That's pretty straightforward, causing Nginx to allow connections to www.example.com/mysecretlocation by the IP address 1.1.1.1, while kicking a 403 Forbidden message to all others.&lt;/p&gt;
+&lt;p&gt;This gets a little different when using Nginx to proxy connections to Ghost, but it is still pretty straightforward - we just need to add the proxy information to the location block, like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;server {&lt;/span&gt;
+&lt;span class="err"&gt;    ...&lt;/span&gt;
+&lt;span class="err"&gt;    location /ghost/ {&lt;/span&gt;
+&lt;span class="err"&gt;        allow 1.1.1.1;&lt;/span&gt;
+&lt;span class="err"&gt;        deny all;&lt;/span&gt;
+&lt;span class="err"&gt;        proxy_set_header   X-Real-IP $remote_addr;&lt;/span&gt;
+&lt;span class="err"&gt;        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;&lt;/span&gt;
+&lt;span class="err"&gt;        proxy_set_header   X-Forwarded-Proto $scheme;&lt;/span&gt;
+&lt;span class="err"&gt;        proxy_set_header   Host $http_host;&lt;/span&gt;
+&lt;span class="err"&gt;        proxy_set_header   Connection &amp;quot;&amp;quot;;&lt;/span&gt;
+&lt;span class="err"&gt;        proxy_http_version 1.1;&lt;/span&gt;
+&lt;span class="err"&gt;        proxy_pass         http://ghost_upstream_defined_in_nginx_conf;&lt;/span&gt;
+&lt;span class="err"&gt;    }&lt;/span&gt;
+&lt;span class="err"&gt;    ...&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This config does the same thing as before but applies it to the proxy for Ghost, which is important since the URI of &lt;code&gt;/ghost/signin&lt;/code&gt; doesn't actually exist in the website's directory root, but is only understood by Ghost. However, if an IP other than 1.1.1.1 were to go to www.mywebsite.com/ghost/signin, they would get a 403 Forbidden message.&lt;/p&gt;
+&lt;p&gt;Now, when a vulnerability is identified that affects Ghost's administration functionality, the website's exposure to that vulnerability should be greatly reduced.&lt;/p&gt;
+&lt;p&gt;If you have any feedback or questions, contact me on Twitter at &lt;a href="http://twitter.com/codyhatch"&gt;@codyhatch&lt;/a&gt; until I get my contact page up on this site.&lt;/p&gt;</content><category term="Cyber Security"></category><category term="Application"></category><category term="web"></category><category term="cyber security"></category></entry><entry><title>Nginx Tip - Remove Version Number</title><link href="https://codyhatch.com/cyber-security/nginx-remove-version-number.html" rel="alternate"></link><published>2013-10-24T12:06:00-06:00</published><updated>2013-10-24T12:06:00-06:00</updated><author><name>Cody Hatch</name></author><id>tag:codyhatch.com,2013-10-24:/cyber-security/nginx-remove-version-number.html</id><summary type="html">&lt;p&gt;How to remove the version number from Nginx HTTP headers.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I wanted to give another quick tip in the process of hardening the security of Nginx.&lt;/p&gt;
+&lt;p&gt;There are a bunch of things one can do to manage and limit connections, and they're good, but something that is often overlooked is removing the version number of the web server. This isn't a security-through-obscurity thing, but rather taking whatever easy steps one can take to make things even a little bit tougher for an attacker.&lt;/p&gt;
+&lt;p&gt;For example, if there is a vulnerability in a specific version of Nginx, it makes sense not to broadcast the version number running on one's server to the world, allowing anyone paying attention to easily determine whether your server is vulnerable.&lt;/p&gt;
+&lt;p&gt;Of course, one can go to great lengths and change the server software name altogether by modifying Nginx's source code and recompiling, but I'm going to limit this suggestion to something that is easy and within the reach of every web admin out there.&lt;/p&gt;
+&lt;p&gt;To configure Nginx to stop listing its version number in error pages and HTTP headers, add the following line to the server block in your configuration file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;server_tokens&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;off&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That's all that needs to be done. Now, Nginx will only list the fact that it is an Nginx server, but exclude the version in HTTP headers and error pages.&lt;/p&gt;</content><category term="Cyber Security"></category><category term="Application"></category><category term="web"></category><category term="cyber security"></category></entry></feed>
