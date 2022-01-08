@@ -29,19 +29,19 @@
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>
-        window.jQuery || document.write('<script src="https://codyhatch.com/theme/js/jquery.min.js"><\/script>')
+        window.jQuery || document.write('<script src="../theme/js/jquery.min.js"><\/script>')
     </script>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://codyhatch.com/theme/css/bootstrap.css" />
+    <link rel="stylesheet" href="../theme/css/bootstrap.css" />
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link rel="stylesheet" type="text/css" href="https://codyhatch.com/theme/css/ie10-viewport-bug-workaround.css" />
+    <link rel="stylesheet" type="text/css" href="../theme/css/ie10-viewport-bug-workaround.css" />
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="https://codyhatch.com/theme/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="https://codyhatch.com/theme/css/notebooks.css" />
+    <link rel="stylesheet" type="text/css" href="../theme/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../theme/css/notebooks.css" />
     <link href='https://fonts.googleapis.com/css?family=Muli:400,500,700' rel='stylesheet' type='text/css'>
 
-    <link href="https://codyhatch.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Cody Hatch Full Atom Feed" />     <link href="https://codyhatch.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Cody Hatch Full RSS Feed" /> 
+
 
     <meta name="tags" content="Religion" />
     <meta name="tags" content="data science" />
@@ -58,7 +58,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="https://codyhatch.com">Cody Hatch</a>
+                <a class="navbar-brand" href="..">Cody Hatch</a>
             </div>
             <div class="navbar-collapse collapse" id="searchbar">
 
@@ -66,16 +66,14 @@
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Table Of Contents<span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                          <li><a href="https://codyhatch.com/#Data_Science">Data Science</a></li>
-                          <li><a href="https://codyhatch.com/#Cyber_Security">Cyber Security</a></li>
-                          <li><a href="https://codyhatch.com/#Presentations">Presentations</a></li>
-                          <li><a href="https://codyhatch.com/#Tools">Tools</a></li>
+                          <li><a href="../#Data_Science">Data Science</a></li>
+                          <li><a href="../#Cyber_Security">Cyber Security</a></li>
                       </ul>
                   </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="https://codyhatch.com/pages/about.html">About Cody</a></li>
+                            <li><a href="../pages/about.html">About Cody</a></li>
                             <li><a href="https://github.com/orangganjil">GitHub</a></li>
                             <li><a href="https://twitter.com/codyhatch">Twitter</a></li>
                         </ul>
@@ -116,7 +114,7 @@
 <p>First, though, for those unfamiliar with why we would be interested in this question, I’ll give a bit of background. According to <a href="https://www.mormonnewsroom.org/article/elder-russell-m.-nelson-marries-wendy-l.-watson">LDS Newsroom</a>, President Russell Nelson and Wendy Watson Nelson were married April 6, 2006. Wendy Watson was President Nelson’s second wife. His first wife was Dantzel White Nelson, who died February 12, 2005.</p>
 <p>Sister Wendy Watson Nelson was a professor of marriage and family therapy at BYU prior to her marriage to President Nelson, and had written several books about relationships, marriage, and family. Since they have been married, she, along with President Nelson, has spoken at several firesides and face-to-face events, most recently in Las Vegas, Nevada. She frequently provides marriage and relationship advice at these events. She is highly educated, has teaching experience in these topics, is willing to speak frequently on these topics, and is much younger than President Nelson. Naturally, we were curious as to what type of influence, if any, she might have on President Nelson’s talks.</p>
 <p>Since President and Sister Nelson were married in April 2006, in performing my analysis I had initially thought I’d grab all of President Nelson’s talks going back to 1995 so as to get a similar number of years pre-marriage as there are available post-marriage; however, I was unable to find any way on lds.org to sort President Nelson’s talks chronologically. I had considered sucking down all of his talks from the site and sorting them myself, but was reluctant to do so due to potential loads that might place on the Church’s web servers (there are a lot of talks). It just seemed like I’d be crossing some line, so I settled on General Conference talks. I downloaded all of President Nelson’s General Conference talks going back to April 1995 and ran them through a tool that performs a word count on the text. I kept the top ten words used in each talk and added them to a data frame within a Python program. Finally, I filtered the talks for words associated with marriage and family (the areas of Sister Nelson’s expertise), and then graphed them on a time series chart along with a reference line for the Nelson’s marriage.</p>
-<p><img alt="svg" src="https://codyhatch.com/images/pres-nelson-family.svg"></p>
+<p><img alt="svg" src="../images/pres-nelson-family.svg"></p>
 </div>
     <!-- <aside>
     <div class="bug-reporting__panel">
@@ -132,7 +130,7 @@
         <div class="container">
             <p class="text-muted">
                 <center>
-                Copyright &copy; Cody Hatch, 2009-2021
+                Copyright &copy; Cody Hatch, 2009-2022
                 </center>
             </p>
         </div>
@@ -146,9 +144,9 @@
     <!-- Bootstrap core JavaScript
       ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://codyhatch.com/theme/js/bootstrap.min.js"></script>
+    <script src="../theme/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="https://codyhatch.com/theme/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../theme/js/ie10-viewport-bug-workaround.js"></script>
 
 </body>
 
