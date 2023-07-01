@@ -131,21 +131,21 @@
 
 <p>That's pretty straightforward, causing Nginx to allow connections to www.example.com/mysecretlocation by the IP address 1.1.1.1, while kicking a 403 Forbidden message to all others.</p>
 <p>This gets a little different when using Nginx to proxy connections to Ghost, but it is still pretty straightforward - we just need to add the proxy information to the location block, like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">server</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="err">...</span><span class="w"></span>
-<span class="w">    </span><span class="err">location</span><span class="w"> </span><span class="err">/ghost/</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
-<span class="w">        </span><span class="err">allow</span><span class="w"> </span><span class="err">1.1.1.1</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="err">deny</span><span class="w"> </span><span class="err">all</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="err">proxy_set_header</span><span class="w">   </span><span class="err">X-Real-IP</span><span class="w"> </span><span class="err">$remote_addr</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="err">proxy_set_header</span><span class="w">   </span><span class="err">X-Forwarded-For</span><span class="w">  </span><span class="err">$proxy_add_x_forwarded_for</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="err">proxy_set_header</span><span class="w">   </span><span class="err">X-Forwarded-Proto</span><span class="w"> </span><span class="err">$scheme</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="err">proxy_set_header</span><span class="w">   </span><span class="err">Host</span><span class="w"> </span><span class="err">$http_host</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="err">proxy_set_header</span><span class="w">   </span><span class="err">Connection</span><span class="w"> </span><span class="err">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="err">proxy_http_version</span><span class="w"> </span><span class="err">1.1</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="err">proxy_pass</span><span class="w">         </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ghost_upstream_defined_in_nginx_conf</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="o">...</span><span class="w"></span>
-<span class="err">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nx">server</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="o">...</span>
+<span class="w">    </span><span class="nx">location</span><span class="w"> </span><span class="o">/</span><span class="nx">ghost</span><span class="o">/</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">allow</span><span class="w"> </span><span class="m m-Double">1.1.1.1</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">deny</span><span class="w"> </span><span class="nx">all</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">proxy_set_header</span><span class="w">   </span><span class="nx">X</span><span class="o">-</span><span class="nx">Real</span><span class="o">-</span><span class="nx">IP</span><span class="w"> </span><span class="err">$</span><span class="nx">remote_addr</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">proxy_set_header</span><span class="w">   </span><span class="nx">X</span><span class="o">-</span><span class="nx">Forwarded</span><span class="o">-</span><span class="nx">For</span><span class="w">  </span><span class="err">$</span><span class="nx">proxy_add_x_forwarded_for</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">proxy_set_header</span><span class="w">   </span><span class="nx">X</span><span class="o">-</span><span class="nx">Forwarded</span><span class="o">-</span><span class="nx">Proto</span><span class="w"> </span><span class="err">$</span><span class="nx">scheme</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">proxy_set_header</span><span class="w">   </span><span class="nx">Host</span><span class="w"> </span><span class="err">$</span><span class="nx">http_host</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">proxy_set_header</span><span class="w">   </span><span class="nx">Connection</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">proxy_http_version</span><span class="w"> </span><span class="m m-Double">1.1</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">proxy_pass</span><span class="w">         </span><span class="nx">http</span><span class="p">:</span><span class="c1">//ghost_upstream_defined_in_nginx_conf;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="o">...</span>
+<span class="p">}</span>
 </code></pre></div>
 
 <p>This config does the same thing as before but applies it to the proxy for Ghost, which is important since the URI of <code>/ghost/signin</code> doesn't actually exist in the website's directory root, but is only understood by Ghost. However, if an IP other than 1.1.1.1 were to go to www.mywebsite.com/ghost/signin, they would get a 403 Forbidden message.</p>
