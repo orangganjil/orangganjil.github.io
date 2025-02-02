@@ -15,8 +15,22 @@
 }
 
 /* Base styles */
+@font-face {
+    font-family: "Newsreader", serif;
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(/fonts/Newsreader.woff2) format('woff2');
+  }
+@font-face {
+    font-family: "Newsreader Italic", serif;
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url(/fonts/Newsreader-Italic.woff2) format('woff2');
+  }
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-family: "Newsreader", serif;
     line-height: 1.6;
     color: var(--text-color);
     background: var(--bg-color);
