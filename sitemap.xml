@@ -6,13 +6,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://codyhatch.com/</loc>
-<lastmod>2025-02-02T01:01:16-00:00</lastmod>
+<lastmod>2025-02-02T01:03:56-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://codyhatch.com/category/lending-club-default-predictor.html</loc>
+<loc>https://codyhatch.com/tools/lending-club-default-predictor.html</loc>
 <lastmod>2017-08-02T00:00:00-06:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
