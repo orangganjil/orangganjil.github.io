@@ -69,7 +69,8 @@
                         bottom: 5
                     },
                     font: {
-                        size: 16
+                        size: 16,
+                        weight: bold
                     }
                 },
                 subtitle: {

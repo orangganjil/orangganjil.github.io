@@ -77,7 +77,7 @@ h3 {
 a {
     color: var(--link-color);
     text-decoration: none;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--link-color);
 }
 
 a:hover {
