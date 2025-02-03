@@ -15,7 +15,7 @@
 &lt;li&gt;Average life expectancy (y-axis)&lt;/li&gt;
 &lt;li&gt;Median wait time for elective procedures (size of bubble)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Here is a bubble chart showing the data.&lt;/p&gt;
+&lt;p&gt;Here is a bubble chart showing the data &lt;em&gt;(if on mobile may need to rotate to landscape mode to view the chart)&lt;/em&gt;.&lt;/p&gt;
 &lt;canvas id="myChart"&gt;&lt;/canvas&gt;
 &lt;script&gt;
     Chart.register(ChartDataLabels);
