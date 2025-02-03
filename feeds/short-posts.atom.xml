@@ -64,13 +64,21 @@
                 title: {
                     display: true,
                     text: 'Healthcare Systems: Spending vs Outcomes vs Wait Times',
+                    padding: {
+                        top: 10,
+                        bottom: 10
+                    },
                     font: {
                         size: 16
                     }
                 },
-                footnote: {
+                subtitle: {
                     display: true,
                     text: 'Bubble size represents median wait times for elective procedures',
+                    padding: {
+                        top: 5,
+                        bottom: 5
+                    },
                     font: {
                         size: 12
                     }
