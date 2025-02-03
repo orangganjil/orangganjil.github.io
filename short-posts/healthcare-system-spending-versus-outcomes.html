@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Healthcare Spending vs Outcomes - Cody Hatch</title>
+    <meta property="og:title" content="Cody Hatch" />
+    <meta property="og:description"
+        content="Cody Hatch is a cybersecurity architect at WitnessAi and is always seeking the perfect cup of coffee." />
+    <meta property="og:url" content="https://codyhatch.com/" />
+    <meta property="og:image" content="https://codyhatch.com/images/cody-boat-small.jpg" />
+    <meta name="author" content="Cody Hatch" />
+    <meta name="description"
+        content="Cody Hatch is a cybersecurity architect at WitnessAi and is always seeking the perfect cup of coffee." />
+    <link rel="preload" href="/fonts/Newsreader.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Newsreader-italic.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../theme/css/style.css">
+    <link href="https://codyhatch.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Cody Hatch Full Atom Feed">
+  ...
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><a href="../">Cody Hatch</a></h1>
+                <button id="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="toggle-slider"></span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+<article class="content">
+    <h1>Healthcare Spending vs Outcomes</h1>
+    <p class="author-date"
+    <time datetime="2025-02-02T00:00:00-07:00">
+        February 2025
+    </time>
+    </p>
+    
+    <p>I was reading in The Economist about <a href="https://www.economist.com/britain/2025/01/30/many-britons-are-waiting-12-hours-at-aande">wait times for emergency room services in the UK's NHS</a> and it got me wondering how the NHS compares to several other countries in various healthcare metrics. I decided to compare metrics for the countries listed below, choosing these countries primarily because of the varying ways they implement healthcare, which I'll outline further below.</p>
+<ul>
+<li>Unitied States</li>
+<li>United Kingdom</li>
+<li>Canada</li>
+<li>France</li>
+<li>Switzerland</li>
+<li>Italy</li>
+<li>Portugal</li>
+</ul>
+<p>I chose to review these countries using primarily three metrics:</p>
+<ul>
+<li>Average healchare spending per capita (x-axis)</li>
+<li>Average life expectancy (y-axis)</li>
+<li>Median wait time for elective procedures (size of bubble)</li>
+</ul>
+<p>Here is a bubble chart showing the data.</p>
+<canvas id="myChart"></canvas>
+<script>
+    Chart.register(ChartDataLabels);
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bubble',
+        data: {
+            datasets: [{
+                label: 'Healthcare Metrics by Country',
+                data: [
+                    {x: 12318, y: 76.1, r: 10, country: 'USA'},          // Shorter wait times
+                    {x: 5387, y: 80.9, r: 25, country: 'UK'},            // Long wait times
+                    {x: 5905, y: 82.3, r: 30, country: 'Canada'},        // Very long wait times
+                    {x: 3347, y: 81.1, r: 20, country: 'Portugal'},      // Moderate wait times
+                    {x: 3870, y: 82.9, r: 15, country: 'Italy'},         // Moderate-short wait times
+                    {x: 5564, y: 82.3, r: 12, country: 'France'},        // Short wait times
+                    {x: 9673, y: 83.2, r: 15, country: 'Switzerland'}    // Moderate-short wait times
+                ],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(255, 159, 64, 0.5)',
+                    'rgba(45, 183, 209, 0.5)'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Healthcare Spending Per Capita (USD)'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Life Expectancy (years)'
+                    }
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Healthcare Systems: Spending vs Outcomes vs Wait Times',
+                    font: {
+                        size: 16
+                    }
+                },
+                subtitle: {
+                    display: true,
+                    text: 'Bubble size represents median wait times for elective procedures',
+                    font: {
+                        size: 12
+                    }
+                },
+                legend: {
+                    display: false
+                },
+                datalabels: {
+                    formatter: function(value, context) {
+                        return context.dataset.data[context.dataIndex].country;
+                    },
+                    color: 'black',
+                    font: {
+                        weight: 'bold'
+                    },
+                    anchor: 'end',
+                    align: 'top',
+                    offset: 5
+                }
+            }
+        }
+    });
+</script>
+
+<h3>Key Takeaways and Notes</h3>
+<p>blah blah</p>
+</article>
+        </main>
+
+        <footer>
+            <p>Copyright &copy; Cody Hatch, 2009-2025</p>
+        </footer>
+    </div>
+    <script src="../theme/js/theme.js"></script>
+</body>
+</html>
