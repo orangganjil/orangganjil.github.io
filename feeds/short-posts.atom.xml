@@ -106,37 +106,59 @@
 
 &lt;p&gt;&lt;em&gt;Wait Times Note: Represents median wait times in weeks for elective procedures (composite of hip replacement, knee replacement, and cataract surgery) from specialist referral to treatment, based on most recent available data (2022-2023).&lt;/em&gt;&lt;/p&gt;
 &lt;h3&gt;Key Takeaways and Notes&lt;/h3&gt;
-&lt;p&gt;blah blah&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Higher spending does not necessarily correlate with better outcomes (e.g., higher life expectancy).&lt;/li&gt;
+&lt;li&gt;Canada has a median wait time of 20-30 weeks for elective procedures (especially for knee and hip replacements), while the US has the shortest wait time.&lt;/li&gt;
+&lt;li&gt;However, Canada has universal coverage while the short wait times in the US only apply to those who can pay. &lt;strong&gt;Wait times do not capture the access barriers for the uninsured within the US.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;The UK's NHS has signicant waiting lists (median of 18-24 weeks for many procedures), which was exacerbated by COVID-19. However, like Canada, the UK has universal coverage.&lt;/li&gt;
+&lt;li&gt;France and Switzerland have much better wait time control while spending less than the US and achieving better life expectancy. In both countries the healthcare systems are highly regulated with a mix of private and public provision.&lt;/li&gt;
+&lt;li&gt;Italy and Portugal both have high variations by region. Italy, especially, regulates healthcare at a regional level so there can be high degrees of variation between regions. In both countries public system delays are balanced by affordable, private options.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This visualization helps show that there's often a trade-off between universal access, cost, and wait times. The US system has shorter waits but at much higher cost and with access barriers, while Canada achieves universal coverage but with longer waits. European systems like France and Switzerland seem to achieve a better balance between these factors.&lt;/p&gt;
 &lt;h3&gt;Key Sources and References:&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;OECD Health Statistics 2023/2024&lt;/strong&gt;
-- "Health at a Glance 2023: OECD Indicators"
-- Primary source for spending and life expectancy data
-- URL: https://www.oecd.org/health/health-at-a-glance.htm&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Commonwealth Fund International Health Policy Survey 2023&lt;/strong&gt;
-- Comparative analysis of healthcare systems
-- Wait times and access metrics
-- https://www.commonwealthfund.org/international-health-policy-center&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;European Observatory on Health Systems and Policies&lt;/strong&gt;
-- Country-specific health system reviews
-- Health Systems in Transition (HiT) series
-- https://eurohealthobservatory.who.int/&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;National Health System Statistics:&lt;/strong&gt;
-- NHS England Waiting Times Data
-- Canadian Institute for Health Information (CIHI)
-- Swiss Federal Office of Public Health
-- French Ministry of Health Statistics&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;King's Fund Analysis 2023&lt;/strong&gt;
-- "How does the NHS compare to health care systems of other countries?"
-- Comparative wait times analysis
-- https://www.kingsfund.org.uk/&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Fraser Institute Wait Times Report 2023&lt;/strong&gt;
-- Canadian wait times analysis
-- Provincial comparisons
-- https://www.fraserinstitute.org/&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;WHO European Health Information Gateway&lt;/strong&gt;
-- Healthcare access metrics
-- System performance indicators
-- https://gateway.euro.who.int/&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OECD Health Statistics 2023/2024&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;"Health at a Glance 2023: OECD Indicators"&lt;/li&gt;
+&lt;li&gt;Primary source for spending and life expectancy data&lt;/li&gt;
+&lt;li&gt;URL: https://www.oecd.org/health/health-at-a-glance.htm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Commonwealth Fund International Health Policy Survey 2023&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Comparative analysis of healthcare systems&lt;/li&gt;
+&lt;li&gt;Wait times and access metrics&lt;/li&gt;
+&lt;li&gt;https://www.commonwealthfund.org/international-health-policy-center&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;European Observatory on Health Systems and Policies&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Country-specific health system reviews&lt;/li&gt;
+&lt;li&gt;Health Systems in Transition (HiT) series&lt;/li&gt;
+&lt;li&gt;https://eurohealthobservatory.who.int/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;National Health System Statistics:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NHS England Waiting Times Data&lt;/li&gt;
+&lt;li&gt;Canadian Institute for Health Information (CIHI)&lt;/li&gt;
+&lt;li&gt;Swiss Federal Office of Public Health&lt;/li&gt;
+&lt;li&gt;French Ministry of Health Statistics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;King's Fund Analysis 2023&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;"How does the NHS compare to health care systems of other countries?"&lt;/li&gt;
+&lt;li&gt;Comparative wait times analysis&lt;/li&gt;
+&lt;li&gt;https://www.kingsfund.org.uk/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Fraser Institute Wait Times Report 2023&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Canadian wait times analysis&lt;/li&gt;
+&lt;li&gt;Provincial comparisons&lt;/li&gt;
+&lt;li&gt;https://www.fraserinstitute.org/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;WHO European Health Information Gateway&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Healthcare access metrics&lt;/li&gt;
+&lt;li&gt;System performance indicators&lt;/li&gt;
+&lt;li&gt;https://gateway.euro.who.int/&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Note: Wait time data can vary significantly based on:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Geographic region within countries&lt;/li&gt;
