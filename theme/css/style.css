@@ -4,6 +4,7 @@
     --link-color: #1a1a1a;
     --link-hover-color: #666;
     --border-color: #bbb;
+    --font-size-base: 20px;
 }
 
 [data-theme="dark"] {
@@ -12,6 +13,7 @@
     --link-color: #e6e6e6;
     --link-hover-color: #999;
     --border-color: #d1d1d1;
+    --font-size-base: 20px;
 }
 
 /* Base styles */
@@ -30,7 +32,7 @@
 body {
     font-family: "Newsreader", serif;
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: var(--font-size-base);
     line-height: 1.6;
     color: var(--text-color);
     background: var(--bg-color);
@@ -60,17 +62,20 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 3em;
-    margin-bottom: 2rem;
+    margin-top: 1em;
+    margin-bottom: 0em;
 }
 
 h2 {
     font-size: 2em;
-    margin: 2rem 0 1rem;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
 
 h3 {
     font-size: 1.8em;
-    margin: 2rem 0 1rem;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
 
 /* Links */
@@ -97,7 +102,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 1.3em;
 }
 
 header h1 a {
@@ -159,7 +164,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .container {
         padding: 1rem;
     }
